@@ -45,26 +45,6 @@ def tcp_scan(host, ports, timeout=1):
 if __name__ == "__main__":
     host = input_host.strip()
     
-    # Common ports to scan
-    common_ports = [
-        20, 21,      # FTP
-        22,          # SSH
-        23,          # Telnet
-        25,          # SMTP
-        53,          # DNS
-        80,          # HTTP
-        110,         # POP3
-        143,         # IMAP
-        443,         # HTTPS
-        445,         # SMB
-        8080, 8443,  # Common web ports
-        3306,        # MySQL
-        5432,        # PostgreSQL
-        6379,        # Redis
-        27017,       # MongoDB
-    ]
-    
-    # Optional: Scan a range of ports
     ports = range(1, 1025)  # Scan ports 1-1024
     
-    tcp_scan(host, common_ports, timeout=1)
+    tcp_scan(host, ports, timeout=1)
